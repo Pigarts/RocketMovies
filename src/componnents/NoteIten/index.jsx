@@ -2,18 +2,18 @@ import {FiPlus, FiX} from "react-icons/fi"
 
 import {Container} from "./styles"
 
- export function NoteIten({isNew, value, onClick, ...rest}) {
+ export function NoteIten({$isNew, value, onClick, ...rest}) {
     return(
-        <Container isNew={isNew}>
+        <Container $isNew={$isNew}>
             <input type="text" 
             value={value} 
-            readOnly={!isNew} 
+            readOnly={!$isNew} 
             {...rest}
             />
             <button type="button"
             onClick={onClick}
-            className={isNew ? "button-add" : "button-remove"}>
-            {isNew ? <FiPlus/> : <FiX/>} 
+            className={$isNew ? "button-add" : "button-remove"}>
+            {$isNew ? <FiPlus/> : <FiX/>} 
             </button>
         </Container>
 

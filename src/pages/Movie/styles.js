@@ -1,4 +1,5 @@
-import {styled} from "styled-components"
+import styled from 'styled-components';
+
 
 export const Container = styled.div`
 min-width: 800px;
@@ -14,4 +15,4 @@ export const Content = styled.div`
     color: ${({theme}) => theme.COLORS.COLOR_1};
 }
 
-`
+  `

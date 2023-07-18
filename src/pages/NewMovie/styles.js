@@ -39,12 +39,15 @@ export const Content = styled.div`
         margin-top: 24px;
         width: 100%;
         min-height: 88px;
+        
 
         display: flex;
+        
         align-items: center;
         justify-content: flex-start;
         padding-left: 16px;
         gap: 24px;
+        overflow-y: scroll;
 
         background-color: ${({theme}) => theme.COLORS.BACKGROUND_1};
 

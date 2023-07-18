@@ -43,7 +43,7 @@ margin-left: 64px;
     
 }
 
->img {
+img {
     height: 64px;
     width: 64px;
     border: 1px solid ${({theme}) => theme.COLORS.GRAY_3};

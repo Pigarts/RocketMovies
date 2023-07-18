@@ -19,13 +19,13 @@ export function Note({ data, ...rest }) {
   }
 
   return (
-    <Link to="/movie">
     <Container {...rest}>
+      <Link to="/movie">
       <h1>{data.title}</h1>
     <Rating>
       {stars}
     </Rating>
-      <p>{data.text}</p>
+      <p>{data.description}</p>
 
       {data.tags && (
         <footer>
@@ -34,7 +34,7 @@ export function Note({ data, ...rest }) {
             ))}
         </footer>
       )}
-    </Container>
       </Link>
+    </Container>
   );
 }

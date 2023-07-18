@@ -2,14 +2,17 @@ import styled from 'styled-components';
 
 
 export const Container = styled.button`
-  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  width: 98%;
   background-color: ${( {theme} ) => theme.COLORS.COLOR_2};
   border: none;
   border-radius: 10px;
   padding: 22px;
   margin-bottom: 16px;
   margin-top: 37px;
-  >h1 {
+  margin-right: 22px;
+  h1 {
     flex: 1;
     text-align: left;
     font-weight: 700;
@@ -17,11 +20,11 @@ export const Container = styled.button`
     color: ${( {theme} ) => theme.COLORS.WHITE_1};
   }
 
-  >p{
+  p{
     color: ${( {theme} ) => theme.COLORS.GRAY_1};
     text-align: justify;
     width: 100%;
-    height: 52px;
+    max-height: 52px;
     font-size: 16px;
     line-height: 18px;
     text-overflow: ellipsis;
@@ -29,7 +32,7 @@ export const Container = styled.button`
     margin-top: 15px;
   }
 
-  >footer {
+  footer {
     width: 100%;
     display: flex;
     margin-top: 24px;
@@ -42,7 +45,7 @@ gap: 6px;
 width: 84px;
 height: 12px;
 margin-top: 4px;
->svg {
+svg {
     height: 12px;
     width: 12px;
     color: ${( {theme} ) => theme.COLORS.COLOR_1};

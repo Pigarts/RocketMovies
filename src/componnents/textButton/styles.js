@@ -5,7 +5,7 @@ width: fit-content;
 height: auto;   
 border: none;
 background: none;
-color: ${({theme, isActive}) => isActive ? theme.COLORS.ORANGE : theme.COLORS.COLOR_1};
+color: ${({theme, $isActive}) => $isActive ? theme.COLORS.ORANGE : theme.COLORS.COLOR_1};
 
 font-size: 16px;
 

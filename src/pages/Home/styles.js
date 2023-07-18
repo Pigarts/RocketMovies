@@ -25,7 +25,9 @@ margin: 0 auto ;
 
 `
 export const Notebox = styled.div`
-width: 100%;
+width: 98%;
+display: flex;
+align-items: flex-start;
 max-height: 717px;
 margin: 0 auto ;
 display: flex;
@@ -33,6 +35,7 @@ flex-direction: column;
 align-items: center;
 
 overflow-y: auto;
+overflow-x: hidden;
 
 `
 export const NewNote = styled.button`

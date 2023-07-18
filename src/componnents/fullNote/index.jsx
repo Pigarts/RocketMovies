@@ -1,8 +1,15 @@
 import { Container, Title, Rating, Profile, Tags, Description } from "./styles";
 import { AiFillStar, AiOutlineStar, AiOutlineClockCircle } from "react-icons/Ai";
 import { Tag } from "../tags";
+import { useAuth } from "../../hooks/auth";
+import avatarPlaceholder from "../../assets/avatar_placeholder_copiar.png"
+import { api } from "../../services/api";
+
 
 export function FullNote({ data, ...rest }) {
+const {user} = useAuth()
+const avatarUrl = user.avatar ? `${api.defaults.baseURL}files/${user.avatar}` : avatarPlaceholder
+
   const rating = data.rating || 0;
   const maxRating = 5;
   const stars = [];
@@ -21,11 +28,11 @@ export function FullNote({ data, ...rest }) {
     <Container {...rest}>
     <Title>{data.title}<Rating>{stars}</Rating></Title>
     <Profile>
-      <img src="https://pbs.twimg.com/profile_images/1598096522192863232/rorhCIE3_400x400.jpg" alt="imagem de perfiel" />
-      <span>Por Pigarts</span>
-      <AiOutlineClockCircle/> <span>23/05/22 às 08:00</span>
+      <img src={avatarUrl} alt="imagem de perfiel" />
+      <span>Por {user.name}</span>
+      <AiOutlineClockCircle/> <span>{data.created_at}</span>
     </Profile>
-    <Description>{data.text}</Description>
+    <Description>{data.description}</Description>
 
       {data.tags && (
           <Tags>
