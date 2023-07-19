@@ -6,8 +6,8 @@ import {TextBox} from "../../componnents/textBox"
 import {NoteIten} from "../../componnents/NoteIten"
 import {Button} from "../../componnents/button"
 import {Button_2} from "../../componnents/button_style_2"
-import {Link} from "react-router-dom"
-import { useEffect, useState } from "react"
+import {Link, useNavigate} from "react-router-dom"
+import { useState } from "react"
 import { api } from "../../services/api"
 
 export function NewNote() {
@@ -16,7 +16,7 @@ export function NewNote() {
     const [title, setTitle] = useState("")
     const [rating, setRating] = useState("")
     const [description, setDescription] = useState("")
-
+    const navigate = useNavigate()
     
     function handleAddTags(){
         setTags(prevState => [...prevState, newTag]);
@@ -26,9 +26,7 @@ export function NewNote() {
         setTags(prevState => [...prevState.filter(tag => tag !== deleted)]);
     }
     
-    function handleClearFields() {
-        
-    }
+    function handleExcludeNote() {console.log(2)}
 
     function handleSaveMovie() {
         console.log(title, rating, description, tags)
@@ -46,6 +44,8 @@ não deixe nenhum outro campo vazio`)
 
          api.post("/notes", {title, rating, description, tags})
          alert("Nota cadastrada com sucesso")
+         navigate("/")
+         window.location.reload()
     }
 
     return (
@@ -85,7 +85,7 @@ não deixe nenhum outro campo vazio`)
                 
             </div>
             <div id="line4">
-            <Button_2 title= "Excluir filme" onClick={handleClearFields} /> <Button title= "Cadastrar" onClick={handleSaveMovie} /> 
+            <Button_2 title= {<Link to="/">Excluir filme</Link>} onClick={handleExcludeNote} /> <Button title= "Cadastrar" onClick={handleSaveMovie} /> 
 
             </div>
             </Content>

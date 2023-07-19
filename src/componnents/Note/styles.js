@@ -9,8 +9,9 @@ export const Container = styled.button`
   border: none;
   border-radius: 10px;
   padding: 22px;
-  margin-bottom: 16px;
-  margin-top: 37px;
+
+  //margin-bottom: 16px;
+  //margin-top: 37px;
   margin-right: 22px;
   h1 {
     flex: 1;
@@ -25,11 +26,12 @@ export const Container = styled.button`
     text-align: justify;
     width: 100%;
     max-height: 52px;
+    margin-top: 15px;
+    overflow-y: hidden;
+
     font-size: 16px;
     line-height: 18px;
     text-overflow: ellipsis;
-    overflow-y: hidden;
-    margin-top: 15px;
   }
 
   footer {

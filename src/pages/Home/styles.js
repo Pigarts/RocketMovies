@@ -21,21 +21,20 @@ margin: 0 auto ;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 37px;
 }
 
 `
 export const Notebox = styled.div`
-width: 98%;
-display: flex;
-align-items: flex-start;
 max-height: 717px;
 margin: 0 auto ;
-display: flex;
-flex-direction: column;
-align-items: center;
-
 overflow-y: auto;
 overflow-x: hidden;
+
+display: flex;
+gap: 24px;
+flex-direction: column;
+align-items: flex-start;
 
 `
 export const NewNote = styled.button`
