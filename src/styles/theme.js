@@ -11,7 +11,7 @@ export default {
       COLOR_2: "rgba(255, 133, 155, 0.05)",
 
   
-
+ 
       GRAY_1: "#999591",
       GRAY_2: "#948F99",
       GRAY_3: "#3E3B47",

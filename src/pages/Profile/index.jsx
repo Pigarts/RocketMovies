@@ -6,6 +6,8 @@ import { useAuth } from "../../hooks/auth"
 import { useState } from "react";
 import  avatarPlaceholder  from "../../assets/avatar_placeholder_copiar.png"
 import {api} from "../../services/api"
+import {CameraIcon} from "../../componnents/Icons"
+import { ArrowLeft, User, Email, Lock } from "../../componnents/Icons";
 
 
 export function Profile() {
@@ -19,7 +21,6 @@ export function Profile() {
     const avatarUrl = user.avatar ? `${api.defaults.baseURL}files/${user.avatar}` : avatarPlaceholder
     const [ avatar, setAvatar ] = useState(avatarUrl)
     const [ avatarFile, setAvatarFile ] = useState(null)
-
 
     async function handleUpdate() {
         const updated = {
@@ -44,24 +45,24 @@ export function Profile() {
     return(
         <Container> 
                 <header>
-                    <Link to="/">Voltar</Link>                
+                    <Link to="/"> <ArrowLeft/> Voltar</Link>                
                 </header>
                 <Form>
                     <Avatar>
                         <img src={avatar} alt="imagem de perfiel" />
                         <label htmlFor="avatar">
-                            
+                            <CameraIcon/>
                             <input onChange={handleChangeAvatar} id="avatar" type="file" />
                         </label>
                     </Avatar>
                 <Input type="text" placeholder="Nome" value={name} 
-                 onChange={e => setName(e.target.value)}/>
+                 onChange={e => setName(e.target.value)} icon={User}/>
                 <Input type="email" placeholder="E-mail" value={email} 
-                 onChange={e => setEmail(e.target.value)}/>
+                 onChange={e => setEmail(e.target.value)} icon={Email}/>
                 <Input type="password" placeholder="Senha" 
-                 onChange={e => setOldPassword(e.target.value)}/>
+                 onChange={e => setOldPassword(e.target.value)} icon={Lock}/>
                 <Input type="password" placeholder="Nova senha" 
-                 onChange={e => setNewPassword(e.target.value)}/>
+                 onChange={e => setNewPassword(e.target.value)} icon={Lock}/>
                 <Button disabled title= "Salvar" onClick={handleUpdate} />
                 </Form>
         </Container>

@@ -4,6 +4,8 @@ import { FullNote } from "../../componnents/fullNote"
 import { Link, useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { api } from "../../services/api"
+import { ArrowLeft } from "../../componnents/Icons";
+
 
 
 export function Movie() {
@@ -23,7 +25,7 @@ export function Movie() {
     <Container>
     <Header/>
         <Content>
-            <Link to="/"> voltar</Link>
+            <Link to="/"><ArrowLeft/> voltar</Link>
 
             <FullNote data={data} />
         </Content>

@@ -1,6 +1,8 @@
 import { Container, Rating } from "./styles";
 import { Tag } from "../tags";
 import { Link } from "react-router-dom";
+import {OutlineStar, FullStar} from "../../componnents/Icons"
+
 
 export function Note({ data, ...rest }) {
   const rating = data.rating || 0;
@@ -8,7 +10,7 @@ export function Note({ data, ...rest }) {
   const stars = [];
 
   for (let i = 0; i < maxRating; i++) {
-    const Icon = i < rating ? "A" : "a";
+    const Icon = i < rating ? FullStar : OutlineStar;
 
     stars.push(
       <Rating key={i}>

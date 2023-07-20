@@ -4,6 +4,8 @@ import {Container, Content, Form,Background} from "./styles"
 import {Input} from "../../componnents/input"
 import {Button} from "../../componnents/button"
 import { Link } from "react-router-dom";
+import { Email, Lock } from "../../componnents/Icons";
+
 
 
 export function SignUp() {
@@ -23,9 +25,9 @@ export function SignUp() {
                 <p id="p1">Aplicação para acompanhar tudo que assistir.</p>
                 <p>Faça seu login</p>
                 <Input type="email" placeholder="E-mail" 
-                    onChange={e => setEmail(e.target.value)}/>
+                    onChange={e => setEmail(e.target.value)} icon={Email}/>
                 <Input type="password" placeholder="Senha"
-                    onChange={e => setPassword(e.target.value)}/>
+                    onChange={e => setPassword(e.target.value)} icon={Lock}/>
                 <Button title= "Entrar" onClick={handleSignIn} />
                 </Form>
                 <Link to="/signin">Criar conta</Link>

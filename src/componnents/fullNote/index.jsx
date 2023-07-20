@@ -3,6 +3,8 @@ import { Tag } from "../tags";
 import { useAuth } from "../../hooks/auth";
 import avatarPlaceholder from "../../assets/avatar_placeholder_copiar.png"
 import { api } from "../../services/api";
+import {OutlineStar, FullStar} from "../../componnents/Icons"
+
 
 
 export function FullNote({ data, ...rest }) {
@@ -14,7 +16,7 @@ const avatarUrl = user.avatar ? `${api.defaults.baseURL}files/${user.avatar}` : 
   const stars = [];
 
   for (let i = 0; i < maxRating; i++) {
-    const Icon = i < rating ? "A" : "a";
+    const Icon = i < rating ? FullStar : OutlineStar ;
 
     stars.push(
       <Rating key={i}>

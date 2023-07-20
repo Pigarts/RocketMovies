@@ -4,6 +4,8 @@ import { Button } from "../../componnents/button"
 import { Link, useNavigate } from "react-router-dom";
 import { api } from "../../../src/services/api"
 import { useState } from "react"
+import { ArrowLeft, User, Email, Lock } from "../../componnents/Icons";
+
 
 export function SignIn() {
     const [name, setName] = useState("");
@@ -43,14 +45,14 @@ export function SignIn() {
                 <p id="p1">Aplicação para acompanhar tudo que assistir.</p>
                 <p>Crie sua conta</p>
                 <Input type="text" placeholder="Nome" 
-                onChange={e => setName(e.target.value)}/>
+                onChange={e => setName(e.target.value)} icon={User}/>
                 <Input type="email" placeholder="E-mail"  
-                onChange={e => setEmail(e.target.value)}/>
+                onChange={e => setEmail(e.target.value)} icon={Email}/>
                 <Input type="password" placeholder="Senha" 
-                onChange={e => setPassword(e.target.value)}/>
+                onChange={e => setPassword(e.target.value)} icon={Lock}/>
                 <Button title= "Cadastrar" onClick={e => handleSignUp(e)} />
                 </Form>
-                <Link to="/"> Voltar para o login</Link>
+                <Link to="/"><ArrowLeft/> Voltar para o login</Link>
             </Content>
             <Background/>
         </Container>

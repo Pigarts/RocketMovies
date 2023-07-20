@@ -4,6 +4,8 @@ import { Note } from "../../componnents/Note";
 import {Link, useNavigate} from "react-router-dom"
 import { api } from "../../services/api";
 import { useState, useEffect } from "react";
+import {Plus} from "../../componnents/Icons"
+
 
 
 export function Home() {
@@ -41,7 +43,7 @@ export function Home() {
         <h2>Meus filmes</h2>
         <div className="buttonBox">
         <NewNote>
-          <Link to="/new"> Adicionar filme</Link>
+          <Link to="/new"> <Plus/> Adicionar filme</Link>
         </NewNote>
         </div>
         </div>
