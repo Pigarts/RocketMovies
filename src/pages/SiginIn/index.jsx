@@ -1,7 +1,6 @@
 import { Container, Content, Form, Background } from "./styles"
 import { Input } from "../../componnents/input"
 import { Button } from "../../componnents/button"
-import { AiOutlineArrowLeft } from "react-icons/Ai"
 import { Link, useNavigate } from "react-router-dom";
 import { api } from "../../../src/services/api"
 import { useState } from "react"
@@ -51,7 +50,7 @@ export function SignIn() {
                 onChange={e => setPassword(e.target.value)}/>
                 <Button title= "Cadastrar" onClick={e => handleSignUp(e)} />
                 </Form>
-                <Link to="/"><AiOutlineArrowLeft/> Voltar para o login</Link>
+                <Link to="/"> Voltar para o login</Link>
             </Content>
             <Background/>
         </Container>
