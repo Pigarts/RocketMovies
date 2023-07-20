@@ -1,5 +1,4 @@
 import {Container, Content, Notebox, NewNote} from "./styles"
-import {FiPlus} from "react-icons/fi";
 import {Header} from "../../componnents/header"
 import { Note } from "../../componnents/Note";
 import {Link, useNavigate} from "react-router-dom"
@@ -42,7 +41,7 @@ export function Home() {
         <h2>Meus filmes</h2>
         <div className="buttonBox">
         <NewNote>
-          <Link to="/new"><FiPlus/> Adicionar filme</Link>
+          <Link to="/new"> Adicionar filme</Link>
         </NewNote>
         </div>
         </div>

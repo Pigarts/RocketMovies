@@ -1,6 +1,5 @@
 import {Container, Content} from "./styles"
 import {Header} from "../../componnents/header"
-import { AiOutlineArrowLeft } from "react-icons/Ai"
 import {Input} from "../../componnents/input"
 import {TextBox} from "../../componnents/textBox"
 import {NoteIten} from "../../componnents/NoteIten"
@@ -52,7 +51,7 @@ não deixe nenhum outro campo vazio`)
         <Container>
             <Header/>
             <Content>
-            <Link to="/"><AiOutlineArrowLeft/>Voltar </Link>
+            <Link to="/">Voltar </Link>
             <h1>Novo filme</h1>
             <div id="line1">
                 <Input type="text" placeholder="Titulo"

@@ -1,7 +1,6 @@
 import {Container, Form, Avatar} from "./styles"
 import { Input } from "../../componnents/input";
 import { Button } from "../../componnents/button"
-import { FiMail, FiLock, FiUser, FiCamera, FiArrowLeft } from "react-icons/fi"
 import { Link } from "react-router-dom";
 import { useAuth } from "../../hooks/auth"
 import { useState } from "react";
@@ -45,23 +44,23 @@ export function Profile() {
     return(
         <Container> 
                 <header>
-                    <Link to="/"><FiArrowLeft/>Voltar</Link>                
+                    <Link to="/">Voltar</Link>                
                 </header>
                 <Form>
                     <Avatar>
                         <img src={avatar} alt="imagem de perfiel" />
                         <label htmlFor="avatar">
-                            <FiCamera/>
+                            
                             <input onChange={handleChangeAvatar} id="avatar" type="file" />
                         </label>
                     </Avatar>
-                <Input type="text" placeholder="Nome" value={name} icon={FiUser}
+                <Input type="text" placeholder="Nome" value={name} 
                  onChange={e => setName(e.target.value)}/>
-                <Input type="email" placeholder="E-mail" value={email} icon={FiMail}
+                <Input type="email" placeholder="E-mail" value={email} 
                  onChange={e => setEmail(e.target.value)}/>
-                <Input type="password" placeholder="Senha" icon={FiLock}
+                <Input type="password" placeholder="Senha" 
                  onChange={e => setOldPassword(e.target.value)}/>
-                <Input type="password" placeholder="Nova senha" icon={FiLock}
+                <Input type="password" placeholder="Nova senha" 
                  onChange={e => setNewPassword(e.target.value)}/>
                 <Button disabled title= "Salvar" onClick={handleUpdate} />
                 </Form>

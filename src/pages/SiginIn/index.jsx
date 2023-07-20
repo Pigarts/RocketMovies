@@ -2,7 +2,6 @@ import { Container, Content, Form, Background } from "./styles"
 import { Input } from "../../componnents/input"
 import { Button } from "../../componnents/button"
 import { AiOutlineArrowLeft } from "react-icons/Ai"
-import { FiMail, FiLock, FiUser } from "react-icons/fi"
 import { Link, useNavigate } from "react-router-dom";
 import { api } from "../../../src/services/api"
 import { useState } from "react"
@@ -44,11 +43,11 @@ export function SignIn() {
                 <h1>RocketMovies</h1>
                 <p id="p1">Aplicação para acompanhar tudo que assistir.</p>
                 <p>Crie sua conta</p>
-                <Input type="text" placeholder="Nome" icon={FiUser}
+                <Input type="text" placeholder="Nome" 
                 onChange={e => setName(e.target.value)}/>
-                <Input type="email" placeholder="E-mail"  icon={FiMail}
+                <Input type="email" placeholder="E-mail"  
                 onChange={e => setEmail(e.target.value)}/>
-                <Input type="password" placeholder="Senha" icon={FiLock}
+                <Input type="password" placeholder="Senha" 
                 onChange={e => setPassword(e.target.value)}/>
                 <Button title= "Cadastrar" onClick={e => handleSignUp(e)} />
                 </Form>

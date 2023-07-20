@@ -1,7 +1,6 @@
 import { Container, Content } from "./styles"
 import { Header } from "../../componnents/header"
 import { FullNote } from "../../componnents/fullNote"
-import { AiOutlineArrowLeft } from "react-icons/Ai"
 import { Link, useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { api } from "../../services/api"
@@ -24,7 +23,7 @@ export function Movie() {
     <Container>
     <Header/>
         <Content>
-            <Link to="/"><AiOutlineArrowLeft/> voltar</Link>
+            <Link to="/"> voltar</Link>
 
             <FullNote data={data} />
         </Content>
