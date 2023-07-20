@@ -1,5 +1,4 @@
 import { Container, Rating } from "./styles";
-import { AiFillStar, AiOutlineStar } from "react-icons/Ai";
 import { Tag } from "../tags";
 import { Link } from "react-router-dom";
 
@@ -9,7 +8,7 @@ export function Note({ data, ...rest }) {
   const stars = [];
 
   for (let i = 0; i < maxRating; i++) {
-    const Icon = i < rating ? AiFillStar : AiOutlineStar;
+    const Icon = i < rating ? "A" : "a";
 
     stars.push(
       <Rating key={i}>

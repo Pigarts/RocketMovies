@@ -1,5 +1,4 @@
 import { Container, Title, Rating, Profile, Tags, Description } from "./styles";
-import { AiFillStar, AiOutlineStar, AiOutlineClockCircle } from "react-icons/Ai";
 import { Tag } from "../tags";
 import { useAuth } from "../../hooks/auth";
 import avatarPlaceholder from "../../assets/avatar_placeholder_copiar.png"
@@ -15,7 +14,7 @@ const avatarUrl = user.avatar ? `${api.defaults.baseURL}files/${user.avatar}` : 
   const stars = [];
 
   for (let i = 0; i < maxRating; i++) {
-    const Icon = i < rating ? AiFillStar : AiOutlineStar;
+    const Icon = i < rating ? "A" : "a";
 
     stars.push(
       <Rating key={i}>
@@ -30,7 +29,7 @@ const avatarUrl = user.avatar ? `${api.defaults.baseURL}files/${user.avatar}` : 
     <Profile>
       <img src={avatarUrl} alt="imagem de perfiel" />
       <span>Por {user.name}</span>
-      <AiOutlineClockCircle/> <span>{data.created_at}</span>
+       <span>{data.created_at}</span>
     </Profile>
     <Description>{data.description}</Description>
 

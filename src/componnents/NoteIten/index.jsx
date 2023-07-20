@@ -1,4 +1,3 @@
-import {FiPlus, FiX} from "react-icons/fi"
 
 import {Container} from "./styles"
 
@@ -13,7 +12,7 @@ import {Container} from "./styles"
             <button type="button"
             onClick={onClick}
             className={$isNew ? "button-add" : "button-remove"}>
-            {$isNew ? <FiPlus/> : <FiX/>} 
+            {$isNew ? "+" : "x"} 
             </button>
         </Container>
 
