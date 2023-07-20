@@ -1,6 +1,6 @@
 import axios from "axios"
 
 export const api = axios.create({
-baseURL: process.env.API_URL || "http://localhost:5173/3333"
+baseURL: "https://rocketmovies-pigarts-backend.onrender.com/"
 
 })
