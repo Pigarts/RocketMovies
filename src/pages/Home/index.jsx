@@ -54,7 +54,6 @@ export function Home() {
           Bugs conhecidos:
           </h2>
           <ul>  
-            <li>Falha ao trocar avatar do usuario</li>
             <li>404 ao ir direto a uma URL com parametros, diferente da inicial. </li>
             <li>Quando a pesquisa por notas é feita fora da pagina home a URL é alterada mas o usuario não é redirecionado </li>
           </ul>
