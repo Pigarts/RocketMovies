@@ -59,3 +59,32 @@ a {
     padding: 16px 32px;
 }
 `;
+
+export const Modal = styled.dialog`
+z-index: 5;
+position: fixed;
+
+display: flex;
+flex-direction: column;
+
+top: 50%;
+left: 50%;
+transform: translateX(-50%);
+
+background:  ${({theme}) => theme.COLORS.BACKGROUND_3};
+border-color: ${({theme}) => theme.COLORS.COLOR_1};
+padding: 16px;
+width: 50%;
+max-height: 250px;
+
+
+display: ${(props) => props.variant === "open" ? `flex` : `none` };
+gap: 16px;
+align-items: center;
+justify-content: center;
+
+p {
+    color: ${({theme}) => theme.COLORS.WHITE_1};
+    text-align: center;
+}
+`

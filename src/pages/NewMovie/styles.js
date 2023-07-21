@@ -59,6 +59,10 @@ export const Content = styled.div`
         gap: 40px;
 
         margin-bottom: 100px;
+        a {
+            margin: 0;
+        }
     }
+
 
 `

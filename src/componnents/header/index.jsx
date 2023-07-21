@@ -45,7 +45,8 @@ export function Header({onInputChange}) {
     
     function handleDetails(id) {  
         navigate(`/movie/${id}`);
-        
+       
+    
       }
 
     useEffect(() => {

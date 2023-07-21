@@ -4,7 +4,6 @@ import {Input} from "../../componnents/input"
 import {TextBox} from "../../componnents/textBox"
 import {NoteIten} from "../../componnents/NoteIten"
 import {Button} from "../../componnents/button"
-import {Button_2} from "../../componnents/button_style_2"
 import {Link, useNavigate} from "react-router-dom"
 import { useState } from "react"
 import { api } from "../../services/api"
@@ -84,7 +83,7 @@ não deixe nenhum outro campo vazio`)
                 
             </div>
             <div id="line4">
-            <Button_2 title= {<Link to="/">Excluir filme</Link>} onClick={handleExcludeNote} /> <Button title= "Cadastrar" onClick={handleSaveMovie} /> 
+            <Button variant="2" title= {<Link to="/">Excluir filme</Link>} onClick={handleExcludeNote} /> <Button variant="1" title= "Cadastrar" onClick={handleSaveMovie} /> 
 
             </div>
             </Content>
