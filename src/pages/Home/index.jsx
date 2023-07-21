@@ -26,11 +26,9 @@ export function Home() {
   function handleDetails(id) {
     navigate(`Movie/${id}`)
   }
-  console.log(modalDisplay)
 
   function handleModalClose() {
     setModalDisplay ("close")
-    console.log(modalDisplay)
   }
 
 
@@ -47,8 +45,20 @@ export function Home() {
 
     return(
     <Container>
-        <Modal variant={modalDisplay} > <p>Bugs conhecidos: <br />
-                    falha ao trocar foto de usuarios</p> <Button title={"fechar"} onClick={handleModalClose}/> </Modal>
+        <Modal variant={modalDisplay} > <p>
+          <h2>
+            Repositorio: <Link to="https://github.com/Pigarts/RocketMovies"> RocketMovies</Link>
+          </h2>
+          <span>Branche online: <strong>Test</strong> </span>
+          <h2>
+          Bugs conhecidos:
+          </h2>
+          <ul>  
+            <li>Falha ao trocar avatar do usuario</li>
+            <li>404 ao ir direto a uma URL com parametros, diferente da inicial. </li>
+            <li>Quando a pesquisa por notas é feita fora da pagina home a URL é alterada mas o usuario não é redirecionado </li>
+          </ul>
+            </p> <Button title={"fechar"} onClick={handleModalClose}/> </Modal>
         <Header onInputChange={handleInputChange}/>
         <Content>
         <div>
