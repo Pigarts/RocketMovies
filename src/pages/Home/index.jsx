@@ -36,7 +36,7 @@ export function Home() {
     async function fetchNotes() {
         const response = await api.get(`notes?title=${search}&tags=`);
         setNotes(response.data);
-        console.log(notes)
+  
         
     }
     

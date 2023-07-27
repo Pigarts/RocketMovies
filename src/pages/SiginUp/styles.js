@@ -5,8 +5,6 @@ import  background from "../../assets/background.png"
 export const Container = styled.div`
 display: flex;
 
-width: 100svw;
-
 `
 export const Content = styled.div`
 display: flex;
@@ -26,7 +24,7 @@ h1{
 #p1 {
     color: ${({theme}) => theme.COLORS.GRAY_5};
     font-size: 14px;
-    
+
 }
 
 p {
@@ -39,7 +37,7 @@ p {
     display: flex;
     align-items: center;
     color: ${({theme}) => theme.COLORS.COLOR_1};
-    
+
 }
 `
 export const Form = styled.form`
@@ -50,5 +48,4 @@ export const Background = styled.div`
 background: url(${background}) no-repeat center center;
 
 flex: 1;
-
 `

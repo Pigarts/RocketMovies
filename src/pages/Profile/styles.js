@@ -55,6 +55,8 @@ margin-top: -83px;
         width: 186px;
         height: 186px;
         border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
     }
 
     

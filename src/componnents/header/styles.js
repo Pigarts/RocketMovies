@@ -60,6 +60,8 @@ img {
     border: 1px solid ${({theme}) => theme.COLORS.GRAY_3};
     border-radius: 50%;
     z-index: 1;
+    object-fit: cover;
+    object-position: center;
 }
 
 `
