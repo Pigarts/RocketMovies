@@ -52,3 +52,41 @@ background: url(${background}) no-repeat center center;
 flex: 1;
 
 `
+export const Modal = styled.dialog`
+z-index: 5;
+position: absolute;
+
+display: flex;
+flex-direction: column;
+
+top: 20%;
+left: 50%;
+transform: translateX(-50%);
+
+background:  ${({theme}) => theme.COLORS.BACKGROUND_3};
+border-color: ${({theme}) => theme.COLORS.COLOR_1};
+padding: 25px 66px ;
+width: 50%;
+//max-height: 250px;
+
+
+display: ${(props) => props.variant === "open" ? `flex` : `none` };
+gap: 6px;
+align-items: center;
+justify-content: center;
+
+p {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    color: ${({theme}) => theme.COLORS.WHITE_1};
+    text-align: justify;
+    a {
+        color: ${({theme}) => theme.COLORS.WHITE_1};
+        text-decoration: underline;
+    }
+    strong {
+        text-transform: uppercase;
+    }
+}
+`

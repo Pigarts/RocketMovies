@@ -1,4 +1,4 @@
-import {Container, Content, NoteBox, Modal} from "./styles"
+import {Container, Content, NoteBox} from "./styles"
 import {Header} from "../../componnents/header"
 import { Note } from "../../componnents/Note";
 import {Link, useNavigate} from "react-router-dom"
@@ -13,7 +13,7 @@ export function Home() {
   const [search, setSearch] = useState("");
   const [notes, setNotes] = useState([]);
   const navigate = useNavigate()
-  const [modalDisplay, setModalDisplay] = useState("open");
+
 
  
 
@@ -27,9 +27,7 @@ export function Home() {
     navigate(`Movie/${id}`)
   }
 
-  function handleModalClose() {
-    setModalDisplay ("close")
-  }
+
 
 
   useEffect(() => {
@@ -45,19 +43,6 @@ export function Home() {
 
     return(
     <Container>
-        <Modal variant={modalDisplay} > <p>
-          <h2>
-            Repositorio: <Link to="https://github.com/Pigarts/RocketMovies"> RocketMovies</Link>
-          </h2>
-          <span>Branche online: <strong>Test</strong> </span>
-          <h2>
-          Bugs conhecidos:
-          </h2>
-          <ul>  
-            <li>404 ao ir direto a uma URL com parametros, diferente da inicial. </li>
-            <li>Quando a pesquisa por notas é feita fora da pagina home a URL é alterada mas o usuario não é redirecionado </li>
-          </ul>
-            </p> <Button title={"fechar"} onClick={handleModalClose}/> </Modal>
         <Header onInputChange={handleInputChange}/>
         <Content>
         <div>
