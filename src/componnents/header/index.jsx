@@ -18,7 +18,7 @@ export function Header({onInputChange}) {
     const { pathname } = location;
 
     const navigate = useNavigate()
-    
+
 
     const  {signOut, user}  = useAuth()
     const avatarUrl = user.avatar ? `${api.defaults.baseURL}files/${user.avatar}` : avatarPlaceholder
@@ -36,18 +36,14 @@ export function Header({onInputChange}) {
         signOut()
     }
     
-
-
     function handleInputChange(event) {
         setSearch(event.target.value);
        
     }
     
     function handleDetails(id) {  
-        navigate(`/movie/${id}`);
-       
-    
-      }
+       navigate(`/movie/${id}`)
+       }
 
     useEffect(() => {
         if(search.length > 0 ) {

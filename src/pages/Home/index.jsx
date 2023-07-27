@@ -1,4 +1,4 @@
-import {Container, Content, Notebox, NewNote, Modal} from "./styles"
+import {Container, Content, NoteBox, Modal} from "./styles"
 import {Header} from "../../componnents/header"
 import { Note } from "../../componnents/Note";
 import {Link, useNavigate} from "react-router-dom"
@@ -63,13 +63,11 @@ export function Home() {
         <div>
         <h2>Meus filmes</h2>
         <div className="buttonBox">
-        <NewNote>
-          <Link to="/new"> <Plus/> Adicionar filme</Link>
-        </NewNote>
+        <Button variant= "home" title={<Link to="/new"> <Plus/> Adicionar filme</Link>} onClick={handleModalClose}/>
         </div>
         </div>
 
-        <Notebox>
+        <NoteBox>
         {
                 notes.map(note => (
                     <Note 
@@ -80,7 +78,7 @@ export function Home() {
                     ))
                 }
         
-        </Notebox>
+        </NoteBox>
                                                             
         </Content>
     </Container>

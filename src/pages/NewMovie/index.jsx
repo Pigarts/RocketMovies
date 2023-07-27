@@ -17,6 +17,9 @@ export function NewNote() {
     const navigate = useNavigate()
     
     function handleAddTags(){
+        if(newTag.length < 1) {
+           return alert("tag sem cnteúdo")
+        }
         setTags(prevState => [...prevState, newTag]);
         setNewTag("");    
     }
