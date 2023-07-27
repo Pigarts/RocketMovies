@@ -48,7 +48,7 @@ export function Home() {
         <div>
         <h2>Meus filmes</h2>
         <div className="buttonBox">
-        <Button variant= "home" title={<Link to="/new"> <Plus/> Adicionar filme</Link>} onClick={handleModalClose}/>
+        <Button variant= "home" title={<Link to="/new"> <Plus/> Adicionar filme</Link>} />
         </div>
         </div>
 
